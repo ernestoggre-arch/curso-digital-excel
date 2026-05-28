@@ -1,77 +1,180 @@
+# Curso Digital Profesional en HTML
+
+A continuación se muestra un ejemplo completo y profesional de cómo debe quedar tu curso digital. Puedes copiarlo directamente dentro de un archivo llamado `index.html`.
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curso Digital - Introducción a Excel para la Gestión Administrativa</title>
+<title>Curso Profesional de Excel</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{
-font-family: Arial, sans-serif;
+*{
 margin:0;
 padding:0;
-background:#f4f6f9;
-line-height:1.6;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f4f7fb;
 color:#333;
+line-height:1.7;
 }
 
 header{
-background:#1f4e79;
+background:linear-gradient(135deg,#0f4c81,#1f7ac0);
 color:white;
-padding:40px;
+padding:80px 20px;
 text-align:center;
 }
 
-section{
+header h1{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+header p{
+font-size:1.2rem;
+max-width:900px;
+margin:auto;
+}
+
+nav{
 background:white;
-margin:20px;
-padding:25px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,.1);
-}
-
-h1,h2,h3{
-color:#1f4e79;
-}
-
-.quiz{
-background:#eef5ff;
 padding:15px;
-border-radius:8px;
-margin-top:15px;
+position:sticky;
+top:0;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+z-index:100;
 }
 
-button{
-background:#1f4e79;
-color:white;
-border:none;
-padding:12px 20px;
-border-radius:5px;
-cursor:pointer;
+nav ul{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+list-style:none;
+gap:20px;
 }
 
-button:hover{
-background:#163c5f;
+nav a{
+text-decoration:none;
+color:#0f4c81;
+font-weight:600;
 }
 
-.resultado{
-font-weight:bold;
-margin-top:15px;
+section{
+max-width:1200px;
+margin:40px auto;
+padding:40px;
+background:white;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+h2{
+color:#0f4c81;
+margin-bottom:20px;
+font-size:2rem;
+}
+
+h3{
+margin-top:20px;
+margin-bottom:10px;
+color:#1f7ac0;
+}
+
+.hero-image{
+width:100%;
+border-radius:20px;
+margin-top:30px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.card{
+background:#f8fbff;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,.1);
 }
 
 iframe{
 width:100%;
 height:400px;
 border:none;
-border-radius:8px;
+border-radius:15px;
+margin-top:20px;
+}
+
+ul{
+padding-left:20px;
+}
+
+.quiz{
+background:#eef5ff;
+padding:30px;
+border-radius:15px;
+margin-top:20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:20px;
+border-radius:10px;
+border:1px solid #ccc;
+font-family:'Poppins',sans-serif;
+}
+
+button{
+background:#0f4c81;
+color:white;
+padding:15px 25px;
+border:none;
+border-radius:10px;
+font-size:1rem;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+background:#1f7ac0;
 }
 
 footer{
-background:#1f4e79;
+background:#0f4c81;
 color:white;
 text-align:center;
-padding:20px;
-margin-top:30px;
+padding:40px;
+margin-top:40px;
+}
+
+.badge{
+display:inline-block;
+padding:8px 15px;
+background:#d9ecff;
+color:#0f4c81;
+border-radius:30px;
+font-weight:600;
+margin:5px;
 }
 </style>
 </head>
@@ -79,301 +182,281 @@ margin-top:30px;
 <body>
 
 <header>
-<h1>Curso Digital</h1>
-<h2>Introducción a Excel para la Gestión Administrativa</h2>
-<p>Modalidad en línea | Duración: 4 horas</p>
+<h1>Curso Profesional de Excel Aplicado a la Gestión Administrativa</h1>
+<p>
+Aprende desde cero a utilizar Microsoft Excel como una herramienta profesional para la administración, análisis de datos, control de inventarios, elaboración de reportes y automatización de procesos empresariales.
+</p>
+
+<img class="hero-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop" alt="Excel y administración">
 </header>
 
-<section>
+<nav>
+<ul>
+<li><a href="#objetivo">Objetivo</a></li>
+<li><a href="#modulos">Módulos</a></li>
+<li><a href="#materiales">Materiales</a></li>
+<li><a href="#videos">Videos</a></li>
+<li><a href="#evaluacion">Evaluación</a></li>
+<li><a href="#formulario">Formulario</a></li>
+</ul>
+</nav>
+
+<section id="objetivo">
 <h2>Objetivo General</h2>
 
 <p>
-Al finalizar el curso, el participante será capaz de utilizar las
-herramientas básicas de Microsoft Excel para organizar información,
-realizar cálculos simples y generar reportes básicos que faciliten
-la gestión administrativa de una organización.
+Al finalizar el curso, el participante será capaz de utilizar Microsoft Excel como una herramienta integral para la organización, análisis y administración de información dentro de entornos laborales y académicos. Además, desarrollará habilidades para automatizar cálculos, elaborar reportes profesionales, representar información mediante gráficos y aplicar funciones que faciliten la toma de decisiones empresariales.
 </p>
-</section>
 
-<section>
+<p>
+Este curso busca fortalecer las competencias digitales necesarias en el entorno laboral actual, permitiendo al estudiante incrementar su productividad, optimizar procesos administrativos y mejorar la gestión de información mediante el uso eficiente de hojas de cálculo.
+</p>
 
-<h2>Evaluación Diagnóstica</h2>
-
-<div class="quiz">
-
-<p><strong>1. ¿Qué es Microsoft Excel?</strong></p>
-
-<input type="radio" name="p1"> Navegador Web<br>
-<input type="radio" name="p1"> Procesador de texto<br>
-<input type="radio" name="p1" id="p1correcta"> Hoja de cálculo<br>
-<input type="radio" name="p1"> Editor de imágenes<br>
-
-<br>
-
-<p><strong>2. ¿Qué símbolo inicia una fórmula?</strong></p>
-
-<input type="radio" name="p2"> #<br>
-<input type="radio" name="p2"> *<br>
-<input type="radio" name="p2" id="p2correcta"> =<br>
-<input type="radio" name="p2"> %<br>
-
+<div>
+<span class="badge">Excel</span>
+<span class="badge">Administración</span>
+<span class="badge">Análisis de Datos</span>
+<span class="badge">Reportes</span>
+<span class="badge">Gestión Empresarial</span>
 </div>
-
 </section>
 
 <section>
+<h2>Introducción</h2>
 
-<h2>Módulo 1. Introducción a Excel</h2>
+<p>
+Microsoft Excel es una de las herramientas más utilizadas dentro del ámbito empresarial y administrativo debido a su capacidad para organizar grandes cantidades de información y automatizar cálculos complejos.
+</p>
 
-<h3>Temas</h3>
+<p>
+Actualmente las empresas requieren personal con habilidades digitales capaces de analizar información y generar reportes confiables. Este curso proporciona conocimientos básicos e intermedios que permitirán al participante desenvolverse de manera eficiente en diferentes áreas como recursos humanos, logística, inventarios, finanzas y administración.
+</p>
 
+<img class="hero-image" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Trabajo administrativo">
+</section>
+
+<section id="modulos">
+<h2>Módulos del Curso</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Módulo 1. Introducción a Excel</h3>
+<p>
+Conocerás la interfaz principal de Excel, los tipos de datos, filas, columnas, celdas y hojas de trabajo.
+</p>
 <ul>
 <li>¿Qué es Excel?</li>
 <li>Aplicaciones empresariales</li>
+<li>Tipos de datos</li>
 <li>Interfaz principal</li>
-<li>Filas, columnas y celdas</li>
-<li>Libros y hojas de trabajo</li>
 </ul>
+</div>
 
-<h3>Actividad</h3>
-
+<div class="card">
+<h3>Módulo 2. Organización de Información</h3>
 <p>
-Identifica en tu computadora los elementos principales de Excel
-(barra de herramientas, filas, columnas y hojas).
+Aprenderás a capturar, organizar y dar formato profesional a la información.
 </p>
-
-</section>
-
-<section>
-
-<h2>Módulo 2. Captura y Organización de Datos</h2>
-
 <ul>
-<li>Captura de información</li>
 <li>Formato de celdas</li>
-<li>Ordenamiento de datos</li>
-<li>Filtros automáticos</li>
-<li>Tablas básicas</li>
+<li>Tablas</li>
+<li>Filtros</li>
+<li>Ordenamiento</li>
 </ul>
+</div>
 
-<h3>Actividad</h3>
-
+<div class="card">
+<h3>Módulo 3. Fórmulas y Funciones</h3>
 <p>
-Crear una tabla de asistencia con nombre, puesto y fecha.
+Aplicarás funciones matemáticas y lógicas para automatizar operaciones.
 </p>
-
-</section>
-
-<section>
-
-<h2>Módulo 3. Fórmulas y Funciones Básicas</h2>
-
-<h3>Funciones Principales</h3>
-
 <ul>
 <li>SUMA</li>
 <li>PROMEDIO</li>
-<li>MAX</li>
-<li>MIN</li>
-<li>CONTAR</li>
+<li>MAX y MIN</li>
+<li>Función SI</li>
 </ul>
+</div>
 
-<h3>Ejemplos</h3>
-
-<pre>
-=SUMA(B2:B10)
-
-=PROMEDIO(B2:B10)
-
-=MAX(B2:B10)
-
-=MIN(B2:B10)
-</pre>
-
-<h3>Actividad</h3>
-
+<div class="card">
+<h3>Módulo 4. Gráficos y Reportes</h3>
 <p>
-Elabora una hoja de gastos personales utilizando las funciones vistas.
+Generarás representaciones visuales y reportes administrativos profesionales.
 </p>
-
-</section>
-
-<section>
-
-<h2>Módulo 4. Gráficos y Reportes</h2>
-
 <ul>
-<li>Tipos de gráficos</li>
-<li>Inserción de gráficos</li>
-<li>Personalización</li>
-<li>Exportación e impresión</li>
+<li>Gráficos</li>
+<li>Tablas dinámicas</li>
+<li>Indicadores</li>
+<li>Visualización</li>
 </ul>
+</div>
 
-<h3>Actividad</h3>
-
+<div class="card">
+<h3>Módulo 5. Aplicaciones Administrativas</h3>
 <p>
-Crear una gráfica de ventas mensuales.
+Desarrollarás formatos empresariales aplicables al entorno laboral.
 </p>
+<ul>
+<li>Control de inventarios</li>
+<li>Nómina básica</li>
+<li>Control de asistencia</li>
+<li>Reportes</li>
+</ul>
+</div>
 
+<div class="card">
+<h3>Proyecto Final</h3>
+<p>
+Elaborarás un sistema administrativo en Excel integrando todos los conocimientos adquiridos.
+</p>
+</div>
+
+</div>
 </section>
 
-<section>
-
+<section id="materiales">
 <h2>Materiales de Apoyo</h2>
 
-<h3>Lecturas</h3>
+<div class="grid">
 
-<ul>
-<li>
+<div class="card">
+<h3>Lectura 1</h3>
+<p>Manual oficial de Microsoft Excel.</p>
 <a href="https://support.microsoft.com/es-es/excel" target="_blank">
-Manual de Excel Microsoft
+<button>Consultar</button>
 </a>
-</li>
+</div>
 
-<li>
+<div class="card">
+<h3>Lectura 2</h3>
+<p>Guía de aprendizaje de Office.</p>
 <a href="https://support.microsoft.com/es-es/office" target="_blank">
-Guía de Inicio Rápido Office
+<button>Consultar</button>
 </a>
-</li>
-</ul>
+</div>
 
-<h3>Video 1 - Curso Básico de Excel</h3>
-
-<iframe
-src="https://www.youtube.com/embed/8cV3SRCrHvs"
-allowfullscreen>
-</iframe>
-
-<h3>Video 2 - Funciones Básicas</h3>
-
-<iframe
-src="https://www.youtube.com/embed/9NUjHBNWe9M"
-allowfullscreen>
-</iframe>
-
-</section>
-
-<section>
-
-<h2>Actividad Integradora</h2>
-
+<div class="card">
+<h3>Actividad Descargable</h3>
 <p>
-Desarrolla un archivo de Excel que incluya:
+Realiza prácticas de fórmulas y gráficos en tu computadora.
 </p>
+</div>
 
-<ul>
-<li>Registro de 10 empleados</li>
-<li>Control de asistencia</li>
-<li>Cálculo de horas trabajadas</li>
-<li>Uso de fórmulas</li>
-<li>Un gráfico representativo</li>
-</ul>
+</div>
+</section>
+
+<section id="videos">
+<h2>Videos de Aprendizaje</h2>
+
+<h3>Curso Básico de Excel</h3>
+<iframe src="https://www.youtube.com/embed/8cV3SRCrHvs" allowfullscreen></iframe>
+
+<h3>Funciones Básicas de Excel</h3>
+<iframe src="https://www.youtube.com/embed/9NUjHBNWe9M" allowfullscreen></iframe>
+
+<h3>Gráficos y Reportes</h3>
+<iframe src="https://www.youtube.com/embed/FXL6M0jW728" allowfullscreen></iframe>
 
 </section>
 
-<section>
-
+<section id="evaluacion">
 <h2>Evaluación Final</h2>
 
 <div class="quiz">
 
-<p><strong>1. ¿Cuál es la función para sumar valores?</strong></p>
+<h3>1. ¿Cuál es la función utilizada para sumar datos?</h3>
+<input type="radio" name="p1"> MAX<br>
+<input type="radio" name="p1"> SI<br>
+<input type="radio" name="p1" id="correcta1"> SUMA<br>
+<input type="radio" name="p1"> CONTAR<br><br>
 
-<input type="radio" name="f1"> CONTAR<br>
-<input type="radio" name="f1" id="f1correcta"> SUMA<br>
-<input type="radio" name="f1"> PROMEDIO<br>
-<input type="radio" name="f1"> SI<br>
+<h3>2. ¿Qué herramienta permite representar información visualmente?</h3>
+<input type="radio" name="p2"> Filtro<br>
+<input type="radio" name="p2" id="correcta2"> Gráfico<br>
+<input type="radio" name="p2"> Celda<br>
+<input type="radio" name="p2"> Fórmula<br><br>
 
-<br>
+<h3>3. ¿Qué función calcula el promedio?</h3>
+<input type="radio" name="p3"> SUMA<br>
+<input type="radio" name="p3"> MAX<br>
+<input type="radio" name="p3" id="correcta3"> PROMEDIO<br>
+<input type="radio" name="p3"> SI<br><br>
 
-<p><strong>2. ¿Qué función calcula un promedio?</strong></p>
+<button onclick="calificar()">Calificar evaluación</button>
 
-<input type="radio" name="f2"> MAX<br>
-<input type="radio" name="f2"> MIN<br>
-<input type="radio" name="f2" id="f2correcta"> PROMEDIO<br>
-<input type="radio" name="f2"> CONTAR<br>
-
-<br>
-
-<button onclick="calificar()">
-Calificar Evaluación
-</button>
-
-<p class="resultado" id="resultado"></p>
+<h3 id="resultado"></h3>
 
 </div>
+</section>
 
+<section id="formulario">
+<h2>Formulario de Participación</h2>
+
+<p>
+Completa el siguiente formulario para registrar tu participación dentro del curso digital.
+</p>
+
+<form>
+<label>Nombre completo</label>
+<input type="text" placeholder="Ingresa tu nombre">
+
+<label>Correo electrónico</label>
+<input type="email" placeholder="Ingresa tu correo">
+
+<label>Área de interés</label>
+<select>
+<option>Administración</option>
+<option>Recursos Humanos</option>
+<option>Logística</option>
+<option>Inventarios</option>
+<option>Finanzas</option>
+</select>
+
+<label>¿Qué aprendiste en este curso?</label>
+<textarea rows="5"></textarea>
+
+<button type="submit">Enviar respuestas</button>
+</form>
 </section>
 
 <section>
-
-<h2>Criterios de Evaluación</h2>
-
-<table border="1" cellpadding="10">
-
-<tr>
-<th>Actividad</th>
-<th>Valor</th>
-</tr>
-
-<tr>
-<td>Participación</td>
-<td>40%</td>
-</tr>
-
-<tr>
-<td>Actividad Integradora</td>
-<td>30%</td>
-</tr>
-
-<tr>
-<td>Evaluación Final</td>
-<td>30%</td>
-</tr>
-
-</table>
-
-<br>
+<h2>Conclusión</h2>
 
 <p>
-<strong>Calificación mínima aprobatoria: 80/100</strong>
+El manejo de Excel representa actualmente una competencia indispensable dentro del ámbito profesional. Gracias a este curso, el participante adquiere herramientas que le permitirán mejorar la organización de información, optimizar procesos administrativos y fortalecer su desempeño laboral.
 </p>
 
+<img class="hero-image" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="Capacitación digital">
 </section>
 
 <footer>
-
-<p>
-Curso Digital - Introducción a Excel para la Gestión Administrativa
-</p>
-
-<p>
-Elaborado para fines académicos
-</p>
-
+<h3>Curso Profesional de Excel Aplicado a la Gestión Administrativa</h3>
+<p>Proyecto académico desarrollado para capacitación digital.</p>
 </footer>
 
 <script>
-
 function calificar(){
 
-let puntos = 0;
+let puntos=0;
 
-if(document.getElementById('f1correcta').checked){
+if(document.getElementById('correcta1').checked){
 puntos++;
 }
 
-if(document.getElementById('f2correcta').checked){
+if(document.getElementById('correcta2').checked){
 puntos++;
 }
 
-let porcentaje = (puntos/2)*100;
-
-document.getElementById('resultado').innerHTML =
-"Resultado: " + porcentaje + "%";
-
+if(document.getElementById('correcta3').checked){
+puntos++;
 }
 
+let porcentaje=(puntos/3)*100;
+
+document.getElementById('resultado').innerHTML=
+'Tu resultado final es: '+porcentaje+'%';
+}
 </script>
 
 </body>
